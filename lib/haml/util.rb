@@ -37,7 +37,7 @@ module Haml
     # @param arr [Array<(Object, Object)>] An array of pairs
     # @return [Hash] A hash
     def to_hash(arr)
-      Hash[arr.compact]
+      Hash[*arr.compact.flatten]
     end
 
     # Maps the keys in a hash according to a block.
